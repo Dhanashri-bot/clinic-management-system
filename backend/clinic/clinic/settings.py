@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-kqs*5btxn51@m6wvi+och--v7w3v4yj63m7f)o)2fgqzwrbby+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -120,6 +120,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+# Directory where collectstatic will gather all static assets
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+# Optional: tell Django to serve the React build as a static directory
+STATICFILES_DIRS = [
+    BASE_DIR / 'frontend' / 'dist' / 'assets',
+]
 AUTH_USER_MODEL = 'users.User'
 CORS_ALLOW_ALL_ORIGINS = True
