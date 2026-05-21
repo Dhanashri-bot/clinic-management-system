@@ -1,0 +1,7 @@
+*.sqlite3
+*/env/
+frontend/node_modules/
+backend/clinic/__pycache__/
+backend/clinic/*.pyc
+*.log
+.DS_Store
